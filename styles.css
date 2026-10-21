@@ -1,0 +1,73 @@
+:root{
+  --azul-oscuro:#0b2a3c; /* fondo cabecera/pie; texto blanco 14.9:1 */
+  --azul:#0b4f6c;        /* botones/enlaces; blanco 8.9:1 */
+  --ambar:#f2a900;       /* acentos; sobre azul oscuro 7.4:1, con texto oscuro 7.8:1 */
+  --texto:#1b2430;       /* sobre blanco 15.6:1 */
+  --fondo:#ffffff;
+  --fondo-suave:#e6f2f7;
+  --error:#a30f1f;       /* sobre blanco 7.9:1 */
+  --ok:#0a5c2e;          /* sobre fondo suave 7.1:1 */
+  --radio:.75rem;
+  --sombra:0 .25rem .75rem rgba(11,42,60,.18);
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Segoe UI",Roboto,Arial,sans-serif;font-size:1rem;line-height:1.6;color:var(--texto);background:var(--fondo)}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--azul)}
+a:hover{color:var(--azul-oscuro);text-decoration-thickness:2px}
+:focus-visible{outline:.1875rem solid var(--ambar);outline-offset:.1875rem;box-shadow:0 0 0 .1875rem var(--azul-oscuro)}
+.skip-link{position:absolute;left:1rem;top:-4rem;background:var(--ambar);color:var(--texto);padding:.5rem 1rem;border-radius:var(--radio);z-index:10;font-weight:700}
+.skip-link:focus{top:1rem}
+.site-header{background:var(--azul-oscuro);color:#fff}
+.site-header a{color:#fff}
+.barra{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 5%;flex-wrap:wrap;border-bottom:.125rem solid var(--ambar)}
+.logo{width:13.75rem}
+.menu{list-style:none;margin:0;padding:0;display:flex;gap:.5rem}
+.menu a{display:block;padding:.5rem 1rem;border-radius:var(--radio);text-decoration:none;font-weight:600}
+.menu a:hover{background:var(--azul);}
+.hero{display:flex;align-items:center;gap:2rem;padding:3rem 5%;max-width:75rem;margin:0 auto}
+.hero-texto{flex:1 1 55%}
+.hero-img{flex:1 1 40%;max-width:25rem}
+h1{font-size:2.25rem;line-height:1.2;margin:0 0 1rem}
+h2{font-size:1.5rem;margin:1.25rem 0 .25rem}
+h3{font-size:1.2rem;margin:.75rem 0 .5rem}
+.hero-texto h2{color:var(--ambar)}
+.descripcion{font-size:1.125rem}
+.btn{display:inline-block;background:var(--ambar);color:var(--texto);border:.125rem solid var(--ambar);font:inherit;font-weight:700;padding:.75rem 1.5rem;border-radius:var(--radio);text-decoration:none;cursor:pointer;margin-top:1rem}
+.btn:hover{background:#fff;color:var(--texto);border-color:var(--ambar)}
+main{max-width:75rem;margin:0 auto;padding:2rem 5%}
+#proyectos h2,#contacto h2{margin-top:1rem;border-left:.375rem solid var(--ambar);padding-left:.75rem}
+.tarjetas{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.card{background:var(--fondo);border:.0625rem solid #b8d2de;border-radius:var(--radio);box-shadow:var(--sombra);padding:1rem;overflow:hidden}
+.card:hover{transform:translateY(-.25rem)}
+.card{transition:transform .2s}
+.card img{border-radius:.5rem}
+.enlace{font-weight:700}
+#contacto{background:var(--fondo-suave);border-radius:var(--radio);padding:1.5rem;margin-top:2rem}
+.campo{margin-bottom:1rem}
+label{display:block;font-weight:700;margin-bottom:.25rem}
+input,textarea{width:100%;font:inherit;padding:.625rem;border:.125rem solid #4a6272;border-radius:.5rem;background:#fff;color:var(--texto)}
+input:hover,textarea:hover{border-color:var(--azul)}
+input.invalido,textarea.invalido{border-color:var(--error)}
+.error{display:block;color:var(--error);font-size:.9rem;min-height:1.25rem}
+.estado{font-weight:700}
+.estado.ok{color:var(--ok)}
+.estado.fallo{color:var(--error)}
+.site-footer{background:var(--azul-oscuro);color:#fff;text-align:center;padding:1.5rem 5%;border-top:.125rem solid var(--ambar)}
+.redes{list-style:none;display:flex;justify-content:center;gap:1.5rem;padding:0;margin:0 0 1rem;flex-wrap:wrap}
+@media (max-width:768px){
+  .hero{flex-direction:column;text-align:left;padding:2rem 5%}
+  .hero-img{max-width:20rem}
+  .tarjetas{grid-template-columns:1fr}
+  h1{font-size:1.9rem}
+  .barra{justify-content:center}
+}
+@media (max-width:480px){
+  .menu{flex-direction:column;width:100%;align-items:stretch;text-align:center}
+  .logo{width:11rem}
+  h1{font-size:1.6rem}
+  .btn{display:block;width:100%;text-align:center}
+  #contacto{padding:1rem}
+  .redes{flex-direction:column;gap:.5rem}
+}
+@media (prefers-reduced-motion:reduce){.card{transition:none}.card:hover{transform:none}}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nodo Sur Soluciones Digitales: software a la medida, nube y soporte TI para PyMEs en Monterrey.">
+  <title>Nodo Sur Soluciones Digitales</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <header class="site-header">
+    <div class="barra">
+      <img class="logo" src="images/logo.svg" alt="Logotipo de Nodo Sur Soluciones Digitales" width="220" height="56">
+      <nav aria-label="Navegación principal">
+        <ul class="menu">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="hero" id="inicio">
+      <div class="hero-texto">
+        <h1>Nodo Sur Soluciones Digitales</h1>
+        <p class="descripcion">Somos una empresa del sector terciario, con sede en Monterrey, N.L., que ofrece desarrollo de software a la medida, servicios en la nube y soporte TI para pequeñas y medianas empresas.</p>
+        <h2>Misión</h2>
+        <p>Impulsar la productividad de las PyMEs mediante tecnología confiable, accesible y hecha a su medida.</p>
+        <h2>Visión</h2>
+        <p>Ser en 2030 el aliado tecnológico preferido de las PyMEs del norte de México.</p>
+        <a class="btn" href="#contacto">Solicita una cotización</a>
+      </div>
+      <img class="hero-img" src="images/hero.svg" alt="Ilustración de una pantalla con código conectada a una red de nodos" width="400" height="300">
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section id="proyectos" aria-labelledby="titulo-proyectos">
+      <h2 id="titulo-proyectos">Proyectos destacados</h2>
+      <div class="tarjetas">
+        <article class="card">
+          <img src="images/proyecto-1.svg" alt="Icono de una nube con engranaje que representa la migración a la nube" width="200" height="120">
+          <h3>Migración a la nube</h3>
+          <p>Traslado de servidores locales a infraestructura en la nube para una distribuidora regional, con respaldo automático.</p>
+          <a class="enlace" href="https://aws.amazon.com/" target="_blank" rel="noopener">Conocer más (sitio externo)</a>
+        </article>
+        <article class="card">
+          <img src="images/proyecto-2.svg" alt="Icono de una ventana de aplicación con símbolos de código" width="200" height="120">
+          <h3>Sistema de inventarios web</h3>
+          <p>Aplicación a la medida para controlar existencias y pedidos de una cadena de tiendas de abarrotes.</p>
+          <a class="enlace" href="https://developer.mozilla.org/es/" target="_blank" rel="noopener">Conocer más (sitio externo)</a>
+        </article>
+        <article class="card">
+          <img src="images/proyecto-3.svg" alt="Icono de un audífono que representa el soporte técnico" width="200" height="120">
+          <h3>Mesa de soporte TI</h3>
+          <p>Servicio de atención remota 24/7 con seguimiento de tickets para una red de clínicas privadas.</p>
+          <a class="enlace" href="https://www.w3.org/" target="_blank" rel="noopener">Conocer más (sitio externo)</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contacto" aria-labelledby="titulo-contacto">
+      <h2 id="titulo-contacto">Contacto</h2>
+      <p>Escríbenos a <a href="mailto:contacto@nodosur.mx">contacto@nodosur.mx</a> o llena el formulario.</p>
+      <form id="form-contacto" action="mailto:contacto@nodosur.mx" method="post" enctype="text/plain" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" required minlength="3" maxlength="60" autocomplete="name" aria-describedby="error-nombre">
+          <span class="error" id="error-nombre"></span>
+        </div>
+        <div class="campo">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" required maxlength="80" autocomplete="email" aria-describedby="error-correo">
+          <span class="error" id="error-correo"></span>
+        </div>
+        <div class="campo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="5" required minlength="10" maxlength="500" aria-describedby="error-mensaje"></textarea>
+          <span class="error" id="error-mensaje"></span>
+        </div>
+        <button class="btn" type="submit">Enviar mensaje</button>
+        <p id="estado-form" class="estado" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <ul class="redes">
+      <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a></li>
+      <li><a href="https://github.com/" target="_blank" rel="noopener">GitHub</a></li>
+    </ul>
+    <p>&copy; 2026 Nodo Sur Soluciones Digitales S.A. de C.V. Empresa ficticia con fines académicos.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>
